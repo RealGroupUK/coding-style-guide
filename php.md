@@ -75,4 +75,33 @@ Shorthand PHP tags must never be used.
 ### Remove trailing whitespace
 
 
+## Naming conventions
+### Class names
+Class names should use capitalized words with no spaces or underscores. Any acronyms should be all uppe case.
 
+    class MyNewClass extends MyClass { [...] }
+    
+### Method names
+Methods within classes should use a `camelCasee` format. The first letter should be lowercase and subsequent words should start with and uppercase character.
+
+    public function myFunction() { [...] }
+    
+### Constants
+Constants should be in all upper-case with underscores separating words:
+	
+    define( 'MY_CONSTANT', true );
+
+### File names
+File names should match the name and case structure of the class within. Eg. `MyNewClass` should have the filename `MyNewClass.php`.
+
+## Space usage
+Always put spaces after commas, and on both sides of logical, comparison, string and assignment operators.
+
+    x == 23
+    foo && bar
+    ! foo
+    array( 1, 2, 3 )
+    $baz . '-5'
+    $term .= 'X'
+    
+Put spaces on both sides of the opening and closing parentheses of `if`, `elseif`, `foreach`, `for`, and `switch` blocks.
