@@ -37,6 +37,26 @@ This file MUST be uploaded as the release file.
 
 External dependencies, loaded in via external URL's or content delivery networks should ideally be avoided. Instead, external libraries should be included in the release package and hosted locally to ensure they remain available.
 
+### Important note
+
+When creating a release zip, there is a very important structure to follow - The zip contents MUST be layed out with a single folder at the root of the zip.
+
+Failure to follow this structure can and will result in failed updates!
+
+```
+my_plugin.zip
+    my_plugin-1.2.15
+        controllers
+        models
+        vendor
+        view
+        plugin.php
+```
+
+The folder ```my_plugin-1.2.15``` can be named any valid folder name, although it is recommended to use the structure ```plugin_name``` - ```version```.
+
+Contents within ```my_plugin-1.2.15``` can include any combination of files and / or folders - this content forms the installation content for the plugin.
+
 ## Minification
 
 Any Javascript and / or CSS within a plugin is to be minified before release. A simple define can be used within the plugin header to enable / disable minification for development.
